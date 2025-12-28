@@ -10,3 +10,26 @@ plonck1
 *.swp
 *.swo
 *~
+
+# KiCad temporary files
+*.kicad_prl
+*.kicad_dru
+*.kicad_wks
+*.erc
+*.dcm
+*.lib
+-cache.lib
+-rescue.lib
+*.net
+*.dsn
+*.xml
+*.zip
+*.txt
+*.msg
+*.rpt
+*.cmp
+-*.kicad_mod
+*.000
+*-bak
+*.bck
+autosave-*
