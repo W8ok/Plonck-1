@@ -1,0 +1,12 @@
+# Compiled objects
+*.o
+*.out
+*.exe
+
+# Project executable
+plonck1
+
+# Editor files (Vim/NeoVim)
+*.swp
+*.swo
+*~
