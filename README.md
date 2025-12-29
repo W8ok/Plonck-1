@@ -1,27 +1,26 @@
 # The Plonck-1 Computer
 
-A silly goofy little 1-bit computer that im emulating as hardware accurate as i can  
+A silly goofy little 1-bit computer that im making using descrete components and emulating as hardware accurate as i can.  
 And also my first ever C project :3  
 
 
 ## ISA
 |**Opcode**|**Mnemonic**|**Operation**|**Notes**
 |:---:|:---|:---|:---|
-|`X000`|**AND**|`Data AND ACC → ACC`||
-|`X001`|**XNOR**|`Data XNOR ACC → ACC`||
-|`X010`|**NOP**|`No Operation`||
-|`X011`|**ORCD**|`NOT(Data) OR ACC → ACC`||
-|`X100`|**LD**|`Data → ACC`||
-|`X101`|**ORCR**|`Data OR NOT(ACC) → ACC`||
-|`X110`|**OR**|`Data OR ACC → ACC`||
-|`X111`|**STO**|`ACC → Memory`|Memory OE gets ignored|
-|`0XXX`|**Memory OE**|`No Memory Output`||
-|`1XXX`|**Memory OE**|`Memory → Data`||
+|`000`|**AND**|`Data AND ACC → ACC`||
+|`001`|**XNOR**|`Data XNOR ACC → ACC`||
+|`010`|**NOP**|`No Operation`||
+|`011`|**ORCD**|`NOT(Data) OR ACC → ACC`||
+|`100`|**LD**|`Data → ACC`||
+|`101`|**ORCR**|`Data OR NOT(ACC) → ACC`||
+|`110`|**OR**|`Data OR ACC → ACC`||
+|`111`|**STO**|`ACC → Memory`||
 
 ## Architecture
 Inspired by the MC14500 ICU and Usagi Electric's 24 vacuum tube SBC variant  
 LU integrated into instruction decoder  
 Arbitrary expandable ROM/RAM just like the MC14500  
+Data is almost always equal to memory or input
 
 ## Languages
 C  
@@ -30,7 +29,8 @@ Custom Assembly / Machine Code
 
 ## Status
 ISA - ✅  
-Core - WIP  
-CPU - WIP  
-Auxiliary - WIP  
+CPU Circuit - WIP  
+Memory Circuit - WIP  
+CPU Emulator - WIP  
+Memory Emulator - WIP  
 Assembler - WIP  
