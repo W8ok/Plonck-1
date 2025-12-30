@@ -1,10 +1,72 @@
 #include <stdio.h>
-#include "logic_gates.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include <unistd.h>
+
+#define Clock 1         // Clock frequency in Hz
+#define Memory_size 4   // Memory address space
+
+const uint8_t ROM[] = {
+
+};
+
+bool RAM[1 << Memory_size];
+bool data, acc;
+uint8_t pc = 0;
+
+// Instructions
+uint8_t address;
+uint8_t opcode;
+bool control;
 
 int main() {
-    printf("Testing logic gates...\n");
-    printf("AND(1,1) = %d\n", gate_and(1, 1));  // Should be 1
-    printf("ORCD(0,1) = %d\n", gate_orcd(0, 1)); // NOT(1) OR 0 = 0 OR 0 = 0
-    printf("ORCR(1,0) = %d\n", gate_orcr(1, 0)); // 0 OR NOT(1) = 0 OR 0 = 0
-    return 0;
+  while (true){
+    usleep(1000000 / Clock);
+    fetch();
+    execute(opcode);
+  }
+}
+
+void fetch(){
+  control = (ROM[pc] & 0x80) >> 7; // 0b10000000 not used atm :3
+  opcode = (ROM[pc] & 0x70) >> 4;  // 0b01110000
+  address = (ROM[pc] & 0x0F);      // 0b00001111
+
+  pc++;
+}
+
+
+void execute(uint8_t operation){
+  switch (operation) {
+    case 0:
+      acc = acc & data;
+      break;
+
+    case 1:
+      acc = ~(acc ^ data);
+      break;
+
+    case 2:
+      break;
+
+    case 3:
+      acc = acc | (~data);
+      break;
+
+    case 4:
+      acc = data;
+      break;
+
+    case 5:
+      acc = (~acc) | data;
+      break;
+
+    case 6:
+      acc = acc | data;
+      break;
+
+    case 7:
+      RAM[address] = acc = data;
+      break;
+  }
 }

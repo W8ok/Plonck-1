@@ -1,13 +1,11 @@
-# Makefile for Plonck-1 Emulator
+# Generic Makefile i stole from the internet :3
 CC = gcc
 CFLAGS = -std=c11 -Wall -Wextra -I.
 TARGET = Plonck-1
 
-# All your source files
-SRCS = logic_gates.c \
-      	cpu.c \
-        memory.c \
-        main.c
+# All source files
+SRCS = main.c #\
+			 #other.c
 
 # Convert .c files to .o files
 OBJS = $(SRCS:.c=.o)
@@ -24,7 +22,7 @@ $(TARGET): $(OBJS)
 clean:
 	rm -f $(TARGET) $(OBJS)
 
-# Run the emulator (builds if needed)
+# Run the program (builds if needed)
 run: $(TARGET)
 	./$(TARGET)
 
