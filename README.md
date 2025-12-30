@@ -1,8 +1,10 @@
 # The Plonck-1 Computer
 
-A silly goofy little 1-bit computer that im making using descrete components and emulating as hardware accurate as i can.  
+A silly goofy little 1-bit computer that im writing an emulator for.  
 And also my first ever C project :3  
-
+  
+Inspired by the MC14500 ICU and Usagi Electric's 24 vacuum tube SBC variant  
+https://github.com/Nakazoto/UE-0.1/tree/main  
 
 ## ISA
 |**Opcode**|**Mnemonic**|**Operation**|**Notes**
@@ -17,10 +19,9 @@ And also my first ever C project :3
 |`111`|**STO**|`ACC → Memory`||
 
 ## Architecture
-Inspired by the MC14500 ICU and Usagi Electric's 24 vacuum tube SBC variant  
 LU integrated into instruction decoder  
 Arbitrary expandable ROM/RAM just like the MC14500  
-Data is almost always equal to memory or input
+Data is almost always equal to memory or input  
 
 ## Languages
 C  
