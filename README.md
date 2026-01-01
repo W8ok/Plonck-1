@@ -1,7 +1,7 @@
 # The Plonck-1 Computer
 
 A silly goofy little 1-bit computer that im writing an emulator for.  
-And also my first ever C project :3  
+And also my first ever C project and the goal isnt to make the best thing ever, but to just to get used to the C syntax.  
   
 Inspired by the MC14500 ICU and Usagi Electric's 24 vacuum tube SBC variant  
 https://github.com/Nakazoto/UE-0.1/tree/main  
@@ -30,8 +30,7 @@ Custom Assembly / Machine Code
 
 ## Status
 ISA - ✅  
-CPU Circuit - WIP  
-Memory Circuit - WIP  
+Prototype - ✅  
 CPU Emulator - WIP  
 Memory Emulator - WIP  
 Assembler - WIP  
