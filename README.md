@@ -41,4 +41,4 @@ Custom Assembly / Machine Code
 ## Status
 ISA - Finished  
 Emulator - Finished prototype  
-Assembler - WIP  
+Assembler - Finished prototype  
