@@ -114,4 +114,4 @@ with open(output_file, 'wb') as f:
         # Create hexfile
         hex_instruction = int(instruction, 2)
         f.write(bytes([hex_instruction]))
-        #print(f"0x{hex_instruction},")
+        print(f"0x{hex_instruction},")

@@ -18,8 +18,10 @@ plonck1
 *.erc
 *.dcm
 *.lib
--cache.lib
--rescue.lib
+*-cache.lib
+*-rescue.lib
+fp-info-cache
+*.kicad_dbl
 *.net
 *.dsn
 *.xml
@@ -32,4 +34,5 @@ plonck1
 *.000
 *-bak
 *.bck
+*.zip
 autosave-*

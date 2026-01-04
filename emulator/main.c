@@ -29,11 +29,11 @@ void fetch(){
   pc++;
 }
 
-void execute(uint8_t operation){
+void execute(uint8_t opcode){
   if(control == true) data = true;
   else data = RAM[address];
 
-  switch (operation) {
+  switch (opcode) {
     case 0:
       acc = acc & data;
       break;
@@ -79,17 +79,23 @@ int main() {
   fclose(f);
 
   while (true){
+
     struct timespec delay = {0, 999999999 / CLOCK};  // nanoseconds
     nanosleep(&delay, NULL);
+
     fetch();
+
     if(control == true && opcode == 0b111) {
       printf("Memory Content: \t");
+
       for(int i = 0; i<(1<<MEMORY_SIZE); i++) {
         printf("%d", RAM[i]);
       }
+
       printf("\n");
       break;
     }
+
     execute(opcode);
     print();
   }

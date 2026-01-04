@@ -21,21 +21,34 @@
   XNOR A1
   XNOR A1
 
-;Make all memory locations 1 for testing
+;Make all memory locations 1s and 0s for testing
+  OR 1
   STO A0  ;0b01110000
+  LD A1
   STO A1
+  LD A0
   STO A2
+  LD A1
   STO A3
+  LD A0
   STO A4
+  LD A1
   STO A5
+  LD A0
   STO A6
+  LD A1
   STO A7  ;0b01110111
   STO A8
+  LD A0
   STO A9
   STO A10
+  LD A1
   STO A11
   STO A12
+  LD A0
   STO A13
   STO A14
+  LD A1
   STO A15 ;0b01111111
   HALT    ;0b1111XXXX
+;Memory is now 10101010011001
